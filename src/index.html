@@ -10,32 +10,42 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body id="home">
-
-<!-- NAVBAR -->
+<body>
 
 
-<nav class="navbar navbar-toggleable-md navbar-light fixed-top py-4">
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse p-0 ">
     <div class="container">
-        <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse"
-                data-target="#navbarCollapse">
+        <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="navCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="#" class="navbar-brand"><img src="img/mlogo.png" alt="logo" style="width: 50px;">
-            <h3 class="d-inline align-middle" style="color: #1d1e1f">Mizuxe</h3></a>
+        <a href="index.html" class="navbar-brand text-white mr-4">Blogen</a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active mr-3">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="posts.html" class="nav-link mr-3">Posts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="categories.html" class="nav-link mr-3">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.html" class="nav-link ">Users</a>
+                </li>
+            </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link text-muted">Home</a>
+                <li class="nav-item dropdown">
+                    <a href="#author" class="nav-link  mr-3 dropdown-toggle" data-toggle="dropdown"><i
+                            class="fa fa-user"></i> Welcome Brad <i
+                            class="fa fa-arrow-v"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="profile.html" class="dropdown-item"> <i class="fa fa-user-circle"></i> Profile</a>
+                        <a href="settings.html" class="dropdown-item"><i class="fa fa-gear"></i> Settings</a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link text-muted">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#author" class="nav-link text-muted">Meet The Authors</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link text-muted">Contact</a>
+                    <a href="login.html" class="nav-link "><i class="fa fa-user-times"></i> Logout</a>
                 </li>
             </ul>
         </div>
@@ -43,329 +53,271 @@
 </nav>
 
 
-<!-- SHOWCASE -->
-
-
-<section id="showcase" class="py-5">
-    <div class="primary-overlay text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-12 text-center">
-                    <h1 class="display-2 mt-5 pt-5">Do What You Dream Of..</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, nesciunt?</p>
-                    <a href="#" class="btn btn-outline-secondary btn-lg text-white"><i class="fa fa-arrow-right"></i>Read
-                        More</a>
-                </div>
-                <div class="col-lg-6 col-sm-12 ">
-                    <img src="img/book.png" alt="book image" class="img-fluid hidden-md-down">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- NEWSLETTER -->
-<section id="newsletter" class="bg-inverse text-white py-5">
+<header id="main-header" class=" bg-primary  text-white py-2">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <input type="text" name="name" placeholder="Name" class="form-control form-control-lg">
-            </div>
-            <div class="col-md-4">
-                <input type="email" name="email" placeholder="Email" class="form-control form-control-lg">
-
-            </div>
-            <div class="col-md-4">
-                <button class="btn btn-block btn-lg btn-primary"><i class="fa fa-envelope-open-o"></i>Subscribe</button>
-
-            </div>
+            <h1><i class="fa fa-gear"></i> Dashboard</h1>
         </div>
     </div>
-</section>
+</header>
 
 
-<!-- BOXES -->
-
-
-<section id="boxes" class="py-5">
+<!-- ACTION -->
+<section id="actions" class="bg-faded py-4 mb-4">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="card text-center card-outline-primary">
-                    <div class="card-block">
-                        <h3 class="text-primary">Be Better</h3>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis,
-                            fuga.</p>
-                    </div>
-                </div>
+                <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#addPostModal"><i
+                        class="fa fa-plus"></i> Add Post
+                </button>
             </div>
             <div class="col-md-3">
-                <div class="card text-center card-primary text-white">
-                    <div class="card-block">
-                        <h3>Be Smarter</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, fuga.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-center card-outline-primary">
-                    <div class="card-block">
-                        <h3 class="text-primary">Be Faster</h3>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis,
-                            fuga.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-center card-primary text-white">
-                    <div class="card-block">
-                        <h3>Be Stronger</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, fuga.</p>
-                    </div>
-                </div>
-            </div>
+                <button class="btn btn-success btn-block" data-toggle="modal" data-target="#addCategoryModal"><i
+                        class="fa fa-plus"></i> Add Category
+                </button>
 
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-warning btn-block" data-toggle="modal" data-target="#addUserModal">
+                    <i class="fa fa-plus"></i> Add User
+                </button>
+
+            </div>
         </div>
     </div>
 </section>
 
 
-<!-- ABOUT / WHY -->
+<!-- POSTS -->
 
-<section id="about" class="py-5 bg-faded text-center">
+
+<section id="posts" class="mb-5">
     <div class="container">
-        <div class="col">
-            <div class="info-header mb-5">
-                <h1 class="text-primary">Why This Book?</h1>
-                <p class="lead pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto consectetur,
-                    dolores
-                    esse ipsa libero maiores nemo quod reprehenderit soluta voluptate?</p>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ACCORDION -->
-
-
-    <div id="accordion" role="tablist">
-        <div class="card">
-            <div class="card-header" role="tab" id="heading1">
-                <h5 class="mb-0">
-                    <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
-                        <i class="fa fa-arrow-circle-down"></i>Get Inspired
+        <div class="row">
+            <div class="col-md-9">
+                <div class="card bg-faded">
+                    <div class="card-block py-3">
+                        <h4>Latest Posts</h4>
                     </div>
-                </h5>
+                </div>
+                <table class="table table-striped " style="border: 1px solid rgba(0, 0, 0, 0.125);">
+                    <thead class="thead-inverse">
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Date Posted</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td scope="row">1</td>
+                        <td>Post One</td>
+                        <td>Web Development</td>
+                        <td>July 11, 2017</td>
+                        <td><a href="details.html" class="btn btn-secondary"><i
+                                class="fa fa-angle-double-right"></i> Details</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">2</td>
+                        <td>Post Two</td>
+                        <td>Web Development</td>
+                        <td>July 12, 2017</td>
+                        <td><a href="details.html" class="btn btn-secondary"><i
+                                class="fa fa-angle-double-right"></i> Details</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">3</td>
+                        <td>Post Three</td>
+                        <td>Tech Gadgets</td>
+                        <td>July 12, 2017</td>
+                        <td><a href="details.html" class="btn btn-secondary"><i
+                                class="fa fa-angle-double-right"></i> Details</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">4</td>
+                        <td>Post Four</td>
+                        <td>Health & Wellness</td>
+                        <td>July 13, 2017</td>
+                        <td><a href="details.html" class="btn btn-secondary"><i
+                                class="fa fa-angle-double-right"></i> Details</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">5</td>
+                        <td>Post Five</td>
+                        <td>Web Development</td>
+                        <td>July 14, 2017</td>
+                        <td><a href="details.html" class="btn btn-secondary"><i
+                                class="fa fa-angle-double-right"></i> Details</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">6</td>
+                        <td>Post Six</td>
+                        <td>Business</td>
+                        <td>July 14, 2017</td>
+                        <td><a href="details.html" class="btn btn-secondary"><i
+                                class="fa fa-angle-double-right"></i> Details</a></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
-            <div id="collapse1" class="collapse show">
-                <div class="card-block">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur blanditiis deserunt
-                    dolor,
-                    est illo libero magni maiores non nostrum praesentium rem reprehenderit sint velit vitae. Alias amet
-                    aspernatur dicta eius, et fuga impedit, minus nam nihil nisi perspiciatis praesentium quia quod
-                    recusandae, reiciendis? Asperiores dolor id officiis rem vel.
+            <div class="col-md-3">
+                <div class="col">
+                    <div class="card card-primary text-white text-center mb-3">
+                        <div class="card-block">
+                            <h3>Posts</h3>
+                            <h1 class="display-4"><i class="fa fa-pencil"></i> 6</h1>
+                            <a href="posts.html" class="btn btn-outline-secondary text-white btn-sm">View</a>
+                        </div>
+                    </div>
+                    <div class="card card-success text-white text-center mb-3">
+                        <div class="card-block">
+                            <h3>Categories</h3>
+                            <h1 class="display-4"><i class="fa fa-folder-open-o"></i> 4</h1>
+                            <a href="categories.html" class="btn btn-outline-secondary text-white btn-sm">View</a>
+                        </div>
+                    </div>
+                    <div class="card card-warning text-white text-center mb-3">
+                        <div class="card-block">
+                            <h3>Users</h3>
+                            <h1 class="display-4"><i class="fa fa-users"></i> 6</h1>
+                            <a href="users.html" class="btn btn-outline-secondary text-white btn-sm">View</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-header" role="tab" id="heading2">
-                <h5 class="mb-0">
-                    <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
-                        <i class="fa fa-arrow-circle-down"></i>Gain The Knowledge
-                    </div>
-                </h5>
-            </div>
-            <div id="collapse2" class="collapse">
-                <div class="card-block">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur blanditiis deserunt
-                    dolor,
-                    est illo libero magni maiores non nostrum praesentium rem reprehenderit sint velit vitae. Alias amet
-                    aspernatur dicta eius, et fuga impedit, minus nam nihil nisi perspiciatis praesentium quia quod
-                    recusandae, reiciendis? Asperiores dolor id officiis rem vel.
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header" role="tab" id="heading3">
-                <h5 class="mb-0">
-                    <div href="#collapse3" data-toggle="collapse" data-parent="#accordion">
-                        <i class="fa fa-arrow-circle-down"></i>Open The Mind
-                    </div>
-                </h5>
-            </div>
-            <div id="collapse3" class="collapse">
-                <div class="card-block">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur blanditiis deserunt
-                    dolor,
-                    est illo libero magni maiores non nostrum praesentium rem reprehenderit sint velit vitae. Alias amet
-                    aspernatur dicta eius, et fuga impedit, minus nam nihil nisi perspiciatis praesentium quia quod
-                    recusandae, reiciendis? Asperiores dolor id officiis rem vel.
-                </div>
-            </div>
-        </div>
-    </div>
     </div>
 </section>
 
 
-<!-- AUTHOR -->
-
-<section id="author" class="my-5 text-center">
+<footer class="py-5 bg-inverse text-white">
     <div class="container">
-        <div class="col">
-            <div class="info-header mb-5">
-                <h1 class="text-primary pb-3">Meet The Authors</h1>
-                <p class="lead pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste itaque nihil
-                    obcaecati tempora totam ullam.</p>
+        <div class="row">
+            <div class="col">
+                <p class="lead  text-center ">Copyright @ 2017 Blogen</p>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="card-block">
-                            <img src="img/person1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-                            <h3>Susan Williams</h3>
-                            <h5 class="text-muted">Lead Writer</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto atque
-                                commodi eos esse</p>
-                           <div class="d-flex justify-content-center">
-                            <div class="p-4">
-                                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                            </div>
-                            <div class="p-4">
-                                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                            </div>
-                            <div class="p-4">
-                                <a href="https://plus.google.com/discover"><i class="fa fa-google-plus"></i></a>
-                            </div>
-                           </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="card-block">
-                            <img src="img/person2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-                            <h3>Grace Smith</h3>
-                            <h5 class="text-muted">Co-Writer</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto atque
-                                commodi eos esse</p>
-                           <div class="d-flex justify-content-center">
-                            <div class="p-4">
-                                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                            </div>
-                            <div class="p-4">
-                                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                            </div>
-                            <div class="p-4">
-                                <a href="https://plus.google.com/discover"><i class="fa fa-google-plus"></i></a>
-                            </div>
-                           </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="card-block">
-                            <img src="img/person3.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-                            <h3>John Doe</h3>
-                            <h5 class="text-muted">Lead Writer</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto atque
-                                commodi eos esse</p>
-                           <div class="d-flex justify-content-center">
-                            <div class="p-4">
-                                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                            </div>
-                            <div class="p-4">
-                                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                            </div>
-                            <div class="p-4">
-                                <a href="https://plus.google.com/discover"><i class="fa fa-google-plus"></i></a>
-                            </div>
-                           </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="card-block">
-                            <img src="img/person4.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-                            <h3>Kevin Swanson</h3>
-                            <h5 class="text-muted">Artist</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto atque
-                                commodi eos esse</p>
-                           <div class="d-flex justify-content-center">
-                            <div class="p-4">
-                                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                            </div>
-                            <div class="p-4">
-                                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                            </div>
-                            <div class="p-4">
-                                <a href="https://plus.google.com/discover"><i class="fa fa-google-plus"></i></a>
-                            </div>
-                           </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Contact -->
-<section id="contact" class="bg-faded py-5">
-<div class="container">
-    <div class="row">
-        <div class="col-lg-9">
-            <h3>Get In Touch</h3>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, minus.</p>
-            <div class="input-group input-group-lg">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" name="name" placeholder="Name" class=" form-control">
-            </div>
-            <br>
-            <div class="input-group input-group-lg">
-                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                <input type="email" name="email" placeholder="Email" class=" form-control">
-            </div>
-            <br>
-            <div class="input-group input-group-lg">
-                <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
-                <textarea name="message"  class=" form-control" rows="5"> Message</textarea>
-            </div>
-            <br>
-            <button class="btn btn-primary btn-block btn-lg" type="submit">Submit</button>
-        </div>
-        <div class="col-lg-3 align-self-center">
-            <img src="img/mlogo.png" class="img-fluid" alt="">
-        </div>
-    </div>
-</div>
-</section>
-
-
-<!-- FOOTER -->
-<footer id="main-footer" class="py-5 bg-primary text-white">
-    <div class="container text-center">
-        <div class="col-md-6 offset-md-6">
-
-        <p class="lead">Copyright &copy; 2017 Mizuxe</p>
         </div>
     </div>
 </footer>
 
 
+<!-- POST MODAL-->
+
+<div class="modal fade" id="addPostModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="myModalLabel">Add Post</h5>
+                <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="sel">Category</label>
+                        <select class="form-control" id="sel">
+                            <option value="">Web Development</option>
+                            <option value="">Tech Gadgets</option>
+                            <option value="">Business</option>
+                            <option value="">Health & Wellness</option>
+                        </select>
+                    </div>
+                    <div class="form-group bg-faded p-3">
+                        <label for="file">Image Upload</label>
+                        <input class="form-control-file" type="file" id="file">
+                        <small class="form-text text-muted" id="fileHelp">Max 3mb size</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="body">Body</label>
+                        <textarea name="editor1" class="form-control"></textarea>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button class="btn btn-primary">Add Post</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- CATEGORY MODAL-->
+
+<div class="modal fade" id="addCategoryModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="ModalLabel">Add Category</h5>
+                <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group  py-3">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button class="btn btn-success">Add Category</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- USER MODAL-->
+
+<div class="modal fade" id="addUserModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title" id="ModalLabel1">Add User</h5>
+                <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPass">Confirm Password</label>
+                        <input type="password" name="confirmPass" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button class="btn btn-warning">Add User</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script src="js/jquery.min.js"></script>
 <script src="js/tether.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/navbar-fixed.js"></script>
+<script src="https://cdn.ckeditor.com/4.7.1/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('editor1');
+</script>
 </body>
 </html>
